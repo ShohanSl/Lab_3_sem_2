@@ -4,11 +4,12 @@
 #include "./headers./tasksFuncs.h"
 #include "./headers./boardGameTaskFuctions.h"
 
+struct BitField{
+    unsigned int remainder : 3;
+    unsigned int other_bits : 29;
+};
+
 void remainderTask(){  //Задача с поиском остатка от деления
-    struct BitField{
-        unsigned int remainder : 3;
-        unsigned int other_bits : 29;
-    };
     int num;
     printf("\nEnter a positive integer:");
     num = positiveIntInput();
