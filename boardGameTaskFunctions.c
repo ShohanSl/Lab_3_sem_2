@@ -3,11 +3,11 @@
 #include "./headers./boardGameTaskFuctions.h"
 #include "./headers./inputFuncs.h"
 
-void nameReading(char* name){
+void nameReading(char* name){  //Выводит содержимое поля 'name'
     printf("%s\n", name);
 }
 
-void addNewGame(struct BoardGame **list, int gamesCount) {
+void addNewGame(struct BoardGame **list, int gamesCount) {  //Добавление нового экземпляра структуры в массив
     int i=0;
     char out;
     gamesCount++;
@@ -36,7 +36,7 @@ void addNewGame(struct BoardGame **list, int gamesCount) {
     printf("\nA maximum number of players: %d\n", (*list)[gamesCount-1].Parameters.maxPlayers);
 }
 
-void findGame(struct BoardGame *list, int gamesCount){
+void findGame(struct BoardGame *list, int gamesCount){  //Ищет в массиве структуру с подходящим полем 'cost'
     int reqCost, isFound=0;
     printf("\nEnter the required cost");
     reqCost = positiveIntInput();
@@ -51,7 +51,7 @@ void findGame(struct BoardGame *list, int gamesCount){
     if (isFound==0) printf("\nThere are no games with this cost\n");
 }
 
-void deleteGame(struct BoardGame **list, int *gamesCount){
+void deleteGame(struct BoardGame **list, int *gamesCount){  //Удаляет из массива структуру с подходящим полем 'name'
     if (*gamesCount == 0) {
         printf("The list is empty\n");
         return;
@@ -108,7 +108,7 @@ void deleteGame(struct BoardGame **list, int *gamesCount){
     free(reqName);
 }
 
-void cleanupBoardGames(struct BoardGame *list, int gamesCount) {
+void cleanupBoardGames(struct BoardGame *list, int gamesCount) {  //Очищает память от массива структур
     if (!list) return;
     
     for (int i = 0; i < gamesCount; i++) {

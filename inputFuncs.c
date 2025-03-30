@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include "./headers./inputFuncs.h"
 
-int positiveIntInput(){
+int positiveIntInput(){  //Ввод положительного целого числа
     int res = 0, wrong = 0, isInputed = 0, noInput = 0;
     char inp;
     while(1){
@@ -39,7 +39,7 @@ int positiveIntInput(){
     return res;
 }
 
-void nameInput(char* name){
+void nameInput(char* name){  //Ввод текста в виде динамического массива
     int i = 0;
     char inp;
     while(1){
@@ -66,7 +66,7 @@ void nameInput(char* name){
     }
 }
 
-void staticNameInput(char* name){
+void staticNameInput(char* name){  //Ввод текста в виде статического массива
     int i = 0;
     char inp;
     while(1){

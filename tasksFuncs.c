@@ -4,7 +4,7 @@
 #include "./headers./tasksFuncs.h"
 #include "./headers./boardGameTaskFuctions.h"
 
-void remainderTask(){
+void remainderTask(){  //Задача с поиском остатка от деления
     struct BitField{
         unsigned int remainder : 3;
         unsigned int other_bits : 29;
@@ -16,7 +16,7 @@ void remainderTask(){
     printf("\nThe remainder of the division by 8: %d\n", bits->remainder);
 }
 
-void boardGamesTask(){
+void boardGamesTask(){  //Задача со структурой
     int command, gamesCount = 0;
     struct BoardGame *list;
     list = (struct BoardGame*)malloc(sizeof(struct BoardGame));

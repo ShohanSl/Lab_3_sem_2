@@ -2,7 +2,7 @@
 #include "./headers./inputFuncs.h"
 #include "./headers./tasksFuncs.h"
 
-void main(){
+void main(){ //Главное меню
     int command;
     while(1){
         printf("\nMENU\n\nChoose the task:\n1 - remainder of the division by 8\n2 - a task with board games\n0 - exit");
